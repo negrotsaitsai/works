@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap網頁排版與jQuery特效</title>
+    <link rel="icon shortcut" href="./img/favicon.ico">
+    <!-- Bootstrap官方網站 https://getbootstrap.com/ -->
+    <!-- TODO: 連結Bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- 連結fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- 使用style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        #dateinfo {
+            text-align: center;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        #signature {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- b4-元件名稱-default -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">網站名稱:易熾的逆轉人生</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <!-- em+tab(把字體變斜體文字) -->
+                    <a class="btn btn-danger" href="#section1"><em>過去19年的經歷</em></a>
+                </li>
+                <li class="nav-item">
+                    <!-- i+tab(把字體變斜體文字) -->
+                    <a class="btn btn-primary" href="#section2"><i>未來發展目標</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 導覽列end -->
+    <!-- header -->
+    <header id="header" class="jumbotron">
+        <div class="">
+            <!-- b+tab(粗體字) -->
+            <h1><b>影片和比賽連結</b></h1>
+            <p>I have dream,being a super engineer.</p>
+
+            <a class="btn btn-danger" href="https://fb.watch/49ey-4pzZL/" target="_blank">準備比賽過程影片</a>
+            <a class="btn btn-success" href="https://youtu.be/vcIKtg0k1tU" target="_blank">我豐富的高中生活</a>
+            <a class="btn btn-warning" href="https://sites.google.com/site/2015miaolirobot/"
+                target="_blank">2015wro苗栗縣國中競賽組第四名</a>
+            <a class="btn btn-secondary"
+                href="http://www.era.org.tw/main/wp-content/uploads/2016/07/2016%E5%B9%B4%E5%85%A8%E5%9C%8B%E5%89%B5%E6%84%8F%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%A4%A7%E8%B3%BD%E6%9A%A8%E8%8B%97%E6%A0%97%E7%B8%A3%E6%96%B0%E7%AB%B9%E7%B8%A3%E5%B8%82%E6%A0%A1%E9%9A%9B%E7%9B%83-%E7%AB%B6%E8%B3%BD%E5%9C%8B%E4%B8%AD%E7%B5%84%E9%9A%8A%E4%BC%8D%E7%B7%A8%E8%99%9F%E5%90%8D%E5%96%AE%E5%85%AC%E5%91%8A2.pdf"
+                target="_blank">2016wro苗栗縣及新竹縣市校際盃選拔賽競賽國中組第一名</a>
+
+            <a class="btn btn-dark"
+                href="http://www.era.org.tw/main/wp-content/uploads/2016/08/2016%E5%B9%B4%E5%9C%8B%E9%9A%9B%E5%A5%A7%E6%9E%97%E5%8C%B9%E4%BA%9E%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%85%A8%E5%9C%8B%E7%B8%BD%E6%B1%BA%E8%B3%BD%E6%9A%A8%E5%BD%B0%E5%8C%96%E7%B8%A3%E5%9C%8B%E4%B8%AD%E5%B0%8F%E7%A7%91%E6%8A%80%E6%95%99%E8%82%B2%E5%89%B5%E6%84%8F%E5%8D%9A%E8%A6%BD%E6%9C%83-%E7%AB%B6%E8%B3%BD%E5%9C%8B%E4%B8%AD%E7%B5%84%E9%9A%8A%E4%BC%8D%E5%90%8D%E5%96%AE-%E5%85%AC%E5%91%8A3.pdf"
+                target="_blank">2016wro全國總決賽D組夢之隊</a>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- section1 -->
+    <section id="section1" class="">
+        <h1 class="section-title text-center text-secondary mb-5">Intro</h1>
+        <div class="container">
+            <!-- TODO: 透過 row與col的網格排版 -->
+            <!-- row -->
+            <div class="row">
+                <!-- column -->
+                <div class="col-md-3 col-sm-6 col-6">
+                    <img src="./img/image1.jpg" class="w-100">
+                    <h3> <b>籃球少年</b></h3>
+                    <p>籃球對於我過往的人生有龐大的影響，它是我喜愛的運動，也讓我收穫一群很棒的朋友。當初在球場上追逐的日子還歷歷
+                        在目，等我00000一定會繼續堅持這項運動，也希望在未來的某一天能再次站在比賽場上。</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6 col-6">
+                    <img src="./img/image2.jpg" class="w-100">
+                    <h3><b>排球人生</b></h3>
+                    <p>高三時，為了避免</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="./img/image3.jpg" class="w-100">
+                    <h3>Column 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque odio optio veritatis
+                        tempora cumque dolorum pariatur ab veniam obcaecati.</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6">
+                    <img src="./img/image4.jpg" class="w-100">
+                    <h3>Column 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque odio optio veritatis
+                        tempora cumque dolorum pariatur ab veniam obcaecati.</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-12 col-sm-6">
+                    <img src="./img/image5.png" class="w-100">
+                    <p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lanrentuku.com%2Fsucai%2F53696.html&psig=AOvVaw2Xbvr8ZXpKFwxYPwBmxCy6&ust=1615533338136000&source=images&cd=vfe&ved=0CAYQjRxqFwoTCMDVkb7Zp-8CFQAAAAAdAAAAABAE"
+                            target="_blank">圖片來源於此</a>
+                    </p>
+                    <h3> <b>我的旅遊經驗</b> </h3>
+                    <p>
+                    <ul>
+                        <li>哈爾濱</li>
+                        <li>上海</li>
+                        <li>深圳</li>
+                        <li>香港</li>
+                        <li>澳門</li>
+                        <li>新加坡</li>
+                        <li>馬來西亞</li>
+                        <li>雪梨</li>
+                        <li>墨爾本</li>
+                    </ul>
+                    </p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6">
+                    <h3>Column 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque odio optio veritatis
+                        tempora cumque dolorum pariatur ab veniam obcaecati.</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6">
+                    <h3>Column 7</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque odio optio veritatis
+                        tempora cumque dolorum pariatur ab veniam obcaecati.</p>
+                </div>
+                <!-- column end -->
+                <!-- column -->
+                <div class="col-md-3 col-sm-6">
+                    <h3>Column 8</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque odio optio veritatis
+                        tempora cumque dolorum pariatur ab veniam obcaecati.</p>
+                </div>
+                <!-- column end -->
+            </div>
+            <!-- row end -->
+            <!-- TODO: 設定此區塊距離上方0~5倍margin (留白)-->
+            <!-- TODO: Ctrl + D 修正排版在md時六個排一排 sm三個排一排 sm以下兩個排一排-->
+            <div class="row mt-5">
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-tree fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Cozy Office</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-coffee fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Free coffee bar</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-id-card fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Profesional Team</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-language fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Linguist</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-rocket fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Hackers Spirit</h5>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6 text-center">
+                    <i class="fas fa-graduation-cap fa-2x text-secondary" aria-hidden="true"></i>
+                    <h5 class="mt-3 text-secondary">Self-Learning</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <a class="btn btn-primary" href="#header">
+                <h3>return top</h3>
+            </a>
+    </section>
+    <!-- section1 end -->
+    <!-- section2 -->
+    <section id="section2" class="py-5 bg-secondary text-white">
+        <div class="container">
+            <h1 class="section-title mb-5 text-center">Feature</h1>
+            <!-- TODO: 設定row內的區塊置中對齊 -->
+            <!-- justify-content-center位址至中,text-center文字至中 -->
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-8">
+                    <!-- TODO: 為article1 article2 設置collapse互動方式 -->
+                    <button class="btn btn-primary">The next three years</button>
+                    <button class="btn btn-primary">Location</button>
+                    <article class="my-3" id="article1">
+                        <h3>The next three years</h3>
+                        <p>Our team members started with only 10 people. We're Website developer, Security engineer,
+                            Graphic
+                            Designer, Information Architect , But before the company scaled up, we're all wears more
+                            than
+                            one hat. We provide different kinds of
+                            <strong>Project management, Security and Data Storage solution package</strong> for our
+                            customers
+                        </p>
+                    </article>
+                    <article class="my-3" id="article2">
+                        <h3>Location</h3>
+                        <p>We're based in Taipei Taiwan. There are several international branch offices in Hong Kong,
+                            New York,
+                            Albuquerque, Dublin and GuangDong. You could contact the nearest office for you, or if
+                            you're
+                            interested to work with us. please follow our recruit news</p>
+                    </article>
+                    <!-- 導覽按鈕 -->
+                    <nav class="nav nav-pills">
+                        <a class="nav-link active" href="#article3">Environment</a>
+                        <a class="nav-link" href="#article4">Philosophy</a>
+                    </nav>
+                    <!-- TODO: 為article3 article4 設置tab互動方式 -->
+                    <div>
+                        <article id="article3" class="my-3">
+                            <h3>Environment</h3>
+                            <p>We have a cozy office environment not just create casual atmosphere for daily working
+                                time, but also
+                                encourage our employee stay for the internal self-learning project hosted by our HR and
+                                Software
+                                teams. It’s fun to learn challenging new things. We provide lots of courses in the
+                                topic of
+                                <strong>Languages learning, Software skill and Negotiation skill trainings.</strong>
+                                Check out more details
+                            </p>
+                        </article>
+                        <article id="article4" class="my-3">
+                            <h3>Philosophy</h3>
+                            <p>We always keep our bussiness and products simple. So it will always be easy to learn and
+                                use. Our
+                                goal is making it simple but effective. Even though it might be the first time to use
+                                that kinds
+                                of product, we'll try to make sure every steps will be clear to understand for you. If
+                                needs
+                                any helps, our technical support team will be always standing by.
+                            </p>
+                        </article>
+                    </div>
+                    <!-- TODO: 崁入一個youtube影片 https://www.youtube.com/watch?v=gwDoRPcPxtc -->
+
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <a class="btn btn-primary" href="#header">
+                <h3>return top</h3>
+    </section>
+    <!-- section2 end -->
+    <!-- modalSection end -->
+    <button id="goBackBtn" class="bg-primary">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+    <!-- 引用jquery.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <!-- 連結網頁主程式 -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
