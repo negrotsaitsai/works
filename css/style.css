@@ -41,3 +41,7 @@ footer ul {
     z-index: 1000;
     border-radius: 50%;
 }
+body{
+    padding-top: 50px;
+    margin:0px
+}
